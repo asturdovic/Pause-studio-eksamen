@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding-bottom: 61px;
+}
+
+.profil-container {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  padding-bottom: 80px;
+  overflow-x: hidden;
+}
+
+.profil-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  padding: 10px 0;
+  color: black;
+}
+
+.profile-info {
+  display: flex;
+  padding: 10px 0;
+  background-color: #c3c8b3;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 70px;
+  height: 70px;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.profile-name p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile-name span {
+  margin: 0;
+  font-size: 16px;
+}
+
+.profile-options,
+.profile-extras,
+.profile-holiday {
+  margin-top: 20px;
+}
+
+.option-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #fafafa;
+  color: black;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.profile-picture img {
+  width: 6.25rem;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+}
+
+.option-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
