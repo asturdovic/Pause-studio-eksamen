@@ -14,7 +14,7 @@ function Profil() {
         </header>
 
         <div className="profile-picture">
-          <img src="img/profilbillede.svg" alt="Profile" />
+          <img src="/public/img/profil.png" alt="Profile" />
         </div>
         <div className="profile-name">
           <p>Sasha</p>
@@ -25,7 +25,7 @@ function Profil() {
         <div className="profile-options">
           <button className="option-button">
             <img
-              src="ikoner/medlemsfordele.svg"
+              src="/public/img/badge.png"
               alt="Medlemsfordele"
               className="option-icon"
             />
@@ -33,7 +33,7 @@ function Profil() {
           </button>
           <button className="option-button">
             <img
-              src="ikoner/minebookings.svg"
+              src="/public/img/kalender.png"
               alt="Mine bookings"
               className="option-icon"
             />
@@ -41,7 +41,7 @@ function Profil() {
           </button>
           <button className="option-button">
             <img
-              src="ikoner/brugertilpasning_ikon.svg"
+              src="/public/img/brugertilpasning.png"
               alt="Brugertilpasning"
               className="option-icon"
             />
@@ -49,7 +49,7 @@ function Profil() {
           </button>
           <button className="option-button">
             <img
-              src="ikoner/hjælpecenter_ikon.svg"
+              src="/public/img/hjaelp.png"
               alt="Hjælpecenter"
               className="option-icon"
             />
@@ -58,7 +58,7 @@ function Profil() {
         </div>
         <button className="option-button">
           <img
-            src="ikoner/info_ikon.svg"
+            src="/public/img/om.png"
             alt="Om pause studio"
             className="option-icon"
           />
