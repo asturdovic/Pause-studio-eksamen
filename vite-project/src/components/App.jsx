@@ -9,6 +9,7 @@ import Menubar from "./Menubar";
 import Medlemsfordele from "./Medlemsfordele";
 import Program from "./Program";
 import Onboarding from "./Onboarding";
+import Floating from "./Floating";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
         <Route path="/Login" element={<><Login /><Menubar /></>} />
         <Route path="/Profil" element={<><Profil /><Menubar /></>} />
         <Route path="/Medlemsfordele" element={<><Medlemsfordele /><Menubar /></>} />
-        <Route path="/Program" element={<><Program /><Menubar /></>} />
         <Route path="/Onboarding" element={<Onboarding />} />
+        <Route path="/Floating" element={<Floating />} />
+        <Route path="/Program" element={<><Program /><Menubar /></>} />
       </Routes>
     </BrowserRouter>
   );
