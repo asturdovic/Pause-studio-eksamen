@@ -36,6 +36,7 @@
   color: #000;
   cursor: pointer;
   z-index: 2;
+  padding: 0;
 }
 
 /* Tekstindhold */
