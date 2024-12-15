@@ -35,7 +35,7 @@ function Medlemsfordele() {
       <div class="benefit-card benefit-card2">
         <div class="text-content">
           <p>Adgang til vores hjemme pause program</p>
-          <a href="#" class="cta-button">
+          <a href="/program" class="cta-button">
             Prøv det her
           </a>
         </div>
