@@ -2,10 +2,6 @@ import { useState } from 'react';
 import '../css/Forside.css';
 
 function Forside() {
-  const [count, setCount] = useState(0);
-
-  console.log("Forside component rendered!");  // Log, når komponenten rendres
-
   return (
     <>
       <div>
