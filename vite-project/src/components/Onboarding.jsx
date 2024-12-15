@@ -17,22 +17,29 @@ function Onboarding() {
     {
       id: 2,
       title: "Optjen belønninger",
-      text: "Hver 10. behandling er på vores regning. Hold styr på dine fordele direkte i appen og se,hvor tæt du er på din næste belønning.",
-      backgroundImage: "/public/img/onboarding2.png",
+      text: "Hver 10. behandling er på vores regning. Hold styr på dine fordele direkte i appen og se, hvor tæt du er på din næste belønning.",
+      backgroundImage: "/public/img/onboarding3.png",
     },
     {
       id: 3,
       title: "Få adgang til mere",
       text: "Udforsk vores eksklusive rabatsystem og vores hjemme-pause-program",
-      backgroundImage: "/public/img/onboarding3.png",
+      backgroundImage: "/public/img/onboarding2.png",
       cta: "Kom igang",
     },
   ];
 
-  // Funktion til at skifte slide
+  // Funktion til at skifte til næste slide
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
       setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  // Funktion til at skifte til forrige slide
+  const prevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
     }
   };
 
@@ -41,12 +48,25 @@ function Onboarding() {
     navigate("/Forside");
   };
 
+  // Funktion til at håndtere klik på venstre/højre side
+  const handleScreenClick = (e) => {
+    const screenWidth = window.innerWidth; // Hele skærmbredden
+    const clickPosition = e.clientX; // Hvor på skærmen der blev klikket
+
+    if (clickPosition < screenWidth / 2) {
+      prevSlide(); // Klik på venstre side
+    } else {
+      nextSlide(); // Klik på højre side
+    }
+  };
+
   return (
     <div
       className="onboarding-slide"
       style={{
         backgroundImage: `url(${slides[currentSlide].backgroundImage})`,
       }}
+      onClick={handleScreenClick} // Tilføjer klik-event på hele skærmen
     >
       {/* Overlay */}
       <div className="overlay"></div>
@@ -75,7 +95,10 @@ function Onboarding() {
           <span
             key={index}
             className={`dot ${index === currentSlide ? "active" : ""}`}
-            onClick={() => setCurrentSlide(index)}
+            onClick={(e) => {
+              e.stopPropagation(); // Forhindrer klik på prikker i at skifte slide
+              setCurrentSlide(index);
+            }}
           ></span>
         ))}
       </div>

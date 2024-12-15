@@ -1,71 +1,93 @@
-import { useState } from "react";
 import "/src/css/Profil.css";
 
 function Profil() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
+      {/* Profil titel */}
       <div className="profil-container">
-        <header className="profil-header">
-          <div>
-            <h1>Min profil</h1>
-          </div>
-        </header>
+        <h1 className="profil-title">Min profil</h1>
+      </div>
 
+      {/* Profil info */}
+      <div className="profile-info">
         <div className="profile-picture">
           <img src="/public/img/profil.png" alt="Profile" />
         </div>
         <div className="profile-name">
-          <p>Sasha</p>
-          <span>Min profil</span>
+          <p className="profile-bold">Sasha</p>
+          <span className="profile-subtitle">Mit medlemskab</span>
+        </div>
+      </div>
+
+      {/* Profil muligheder */}
+      <div className="profile-options">
+        <div className="option">
+          <a href="/medlemsfordele" className="option-link">
+            <div className="option-left">
+              <img
+                src="/public/img/badge.png"
+                alt="Medlemsfordele"
+                className="option-icon"
+              />
+              <p>Medlemsfordele</p>
+            </div>
+          </a>
         </div>
 
-        {/* Main profil muligheder */}
-        <div className="profile-options">
-          <button className="option-button">
-            <img
-              src="/public/img/badge.png"
-              alt="Medlemsfordele"
-              className="option-icon"
-            />
-            Medlemsfordele
-          </button>
-          <button className="option-button">
-            <img
-              src="/public/img/kalender.png"
-              alt="Mine bookings"
-              className="option-icon"
-            />
-            Mine bookings
-          </button>
-          <button className="option-button">
-            <img
-              src="/public/img/brugertilpasning.png"
-              alt="Brugertilpasning"
-              className="option-icon"
-            />
-            Brugertilpasning
-          </button>
-          <button className="option-button">
-            <img
-              src="/public/img/hjaelp.png"
-              alt="Hjælpecenter"
-              className="option-icon"
-            />
-            Hjælpecenter
-          </button>
+        <div className="option">
+          <a href="/medlemsfordele" className="option-link">
+            <div className="option-left">
+              <img
+                src="/public/img/kalender.png"
+                alt="Mine bookings"
+                className="option-icon"
+              />
+              <p>Mine bookings</p>
+            </div>
+          </a>
         </div>
-        <button className="option-button">
-          <img
-            src="/public/img/om.png"
-            alt="Om pause studio"
-            className="option-icon"
-          />
-          Om Pause studio recovery
-        </button>
+
+        <div className="option">
+          <a href="/medlemsfordele" className="option-link">
+            <div className="option-left">
+              <img
+                src="/public/img/brugertilpasning.png"
+                alt="Brugertilpasning"
+                className="option-icon"
+              />
+              <p>Brugertilpasning</p>
+            </div>
+          </a>
+        </div>
+
+        <div className="option">
+          <a href="/medlemsfordele" className="option-link">
+            <div className="option-left">
+              <img
+                src="/public/img/hjaelp.png"
+                alt="Hjælpecenter"
+                className="option-icon"
+              />
+              <p>Hjælpecenter</p>
+            </div>
+          </a>
+        </div>
+
+        <div className="option">
+          <a href="/medlemsfordele" className="option-link">
+            <div className="option-left">
+              <img
+                src="/public/img/om.png"
+                alt="Om Pause Studio"
+                className="option-icon"
+              />
+              <p>Om Pause studio recovery</p>
+            </div>
+          </a>
+        </div>
       </div>
     </>
   );
 }
+
 export default Profil;
