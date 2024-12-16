@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import '/src/css/Program.css';
-
-
+import '/src/css/Program.css'; // Importerer CSS-fil til styling
 
 const Program = () => {
+  // Definerer programdataene som en liste
   const programs = [
     { 
       id: 1, 
@@ -117,170 +116,157 @@ const Program = () => {
     }
   ];
   
+// States til at håndtere filtrering, søgning og synliggørelse af programmer
+const [filterCategory, setFilterCategory] = useState('all'); // Kategori-filter
+const [filterSort, setFilterSort] = useState('none'); // Sorteringsfilter
+const [searchTerm, setSearchTerm] = useState(''); // Søgeterm
+const [visiblePrograms, setVisiblePrograms] = useState(6); // Antal synlige programmer
+const [isShowMore, setIsShowMore] = useState(true); // Tilstand for "Vis mere"
+const [expandedProgram, setExpandedProgram] = useState(null); // Tilstand for udvidede beskrivelser
+const [favorites, setFavorites] = useState([]); // Favoritter
+const [progress, setProgress] = useState(0); // Fremskridt (for eksempel for færdiggørelse af programmer)
+const [completedPrograms, setCompletedPrograms] = useState(0); // Færdiggjorte programmer
 
-  const [filterCategory, setFilterCategory] = useState('all');
-  const [filterSort, setFilterSort] = useState('none');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [visiblePrograms, setVisiblePrograms] = useState(6);
-  const [isShowMore, setIsShowMore] = useState(true);
-  const [expandedProgram, setExpandedProgram] = useState(null);
-  const [favorites, setFavorites] = useState([]);
-  const [progress, setProgress] = useState(0); // Progress state
-  const [completedPrograms, setCompletedPrograms] = useState(0); // Completed state
+// Filter- og søgelogik
+const filteredPrograms = programs
+  .filter(program => {
+    const matchesCategory = filterCategory === 'all' || program.category === filterCategory;
+    const matchesSearch = program.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          program.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch; // Returner kun programmer, der matcher kategorien og søgningen
+  })
+  .sort((a, b) => {
+    if (filterSort === 'popular') return b.rating - a.rating; // Sorter efter popularitet (bedømmelse)
+    if (filterSort === 'newest') return new Date(b.date) - new Date(a.date); // Sorter efter nyeste
+    return 0;
+  });
 
-  // Filter, Search, and Sort Logic
-  const filteredPrograms = programs
-    .filter(program => {
-      const matchesCategory = filterCategory === 'all' || program.category === filterCategory;
-      const matchesSearch = program.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            program.description.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-    })
-    .sort((a, b) => {
-      if (filterSort === 'popular') return b.rating - a.rating;
-      if (filterSort === 'newest') return new Date(b.date) - new Date(a.date);
-      return 0;
-    });
-
-  // Handlers
-  const handleSearchChange = (e) => setSearchTerm(e.target.value);
-  const handleFilterClick = (category) => setFilterCategory(category);
-  const handleSortChange = (sortType) => setFilterSort(sortType);
-  const handleShowToggle = () => {
-    setIsShowMore(!isShowMore);
-    setVisiblePrograms(isShowMore ? filteredPrograms.length : 6);
-  };
-  const handleFavoriteClick = (id) => {
-    setFavorites(prevFavorites =>
-      prevFavorites.includes(id) 
-        ? prevFavorites.filter(favId => favId !== id) 
-        : [...prevFavorites, id]
-    );
-  };
-
-  const handleRemoveFavorite = (id) => {
-    // Fjern programmet med det pågældende id fra favorites-arrayet
-    setFavorites(prevFavorites => prevFavorites.filter(favId => favId !== id));
-  };
-  
-  
-  const handleExpandDescription = (id) => setExpandedProgram(expandedProgram === id ? null : id);
-
- // Progress Update
- const handleCompleteChallenge = () => {
-  setCompletedPrograms(completedPrograms + 1);
-  setProgress((prevProgress) => Math.min(prevProgress + 10, 100)); // Tilføjer 10% pr. udfordring
+// Event handlers
+const handleSearchChange = (e) => setSearchTerm(e.target.value); // Opdater søgning
+const handleFilterClick = (category) => setFilterCategory(category); // Filtrering af programmer
+const handleSortChange = (sortType) => setFilterSort(sortType); // Sortering af programmer
+const handleShowToggle = () => {
+  setIsShowMore(!isShowMore); 
+  setVisiblePrograms(isShowMore ? filteredPrograms.length : 6); // Skift synlige programmer ved "Vis mere"
 };
 
+// Favoritfunktionalitet
+const handleFavoriteClick = (id) => {
+  setFavorites(prevFavorites => 
+    prevFavorites.includes(id) 
+      ? prevFavorites.filter(favId => favId !== id) // Fjern fra favoritter
+      : [...prevFavorites, id] // Tilføj til favoritter
+  );
+};
 
-  return (
-    <div>
-      {/* Header Section */}
-      <div className="header">
-        <h1>Velkommen til Pause Studios Programmer</h1>
-        
+const handleRemoveFavorite = (id) => {
+  setFavorites(prevFavorites => prevFavorites.filter(favId => favId !== id)); // Fjern favorit
+};
+
+// Udvidelse af programbeskrivelse
+const handleExpandDescription = (id) => setExpandedProgram(expandedProgram === id ? null : id);
+
+// Opdatering af fremskridt
+const handleCompleteChallenge = () => {
+  setCompletedPrograms(completedPrograms + 1); // Øg antallet af færdiggjorte programmer
+  setProgress((prevProgress) => Math.min(prevProgress + 10, 100)); // Øg fremskridtet med 10%
+};
+
+return (
+  <div>
+    {/* Header sektion */}
+    <div className="header">
+      <h1>Velkommen til Pause Studios Programmer</h1>
+    </div>
+
+    {/* Favoritter */}
+    {favorites.length > 0 && (
+      <div className="favorites-slider">
+        <h2>Favoritter</h2>
+        <div className="favorites-slider-container">
+          {programs.filter(program => favorites.includes(program.id)).map((program) => (
+            <div key={program.id} className="program-card-small">
+              <div className="program-image" style={{ backgroundImage: `url(${program.image})` }}></div>
+              <div className="program-content">
+                <h2>{program.title}</h2>
+                <p>{program.description}</p>
+                <p className="program-length">Længde: {program.length}</p>
+                <div onClick={() => handleRemoveFavorite(program.id)} style={{ cursor: 'pointer', fontSize: '20px' }}>
+                  🗑️ Fjern fra favoritter
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
+    )}
 
-      
+    {/* Dagens Udfordring */}
+    <div className="daily-challenge">
+      <h2>Dagens Udfordring</h2>
+      <p>Udfør 10 minutters meditation for at reducere stress.</p>
+      <button onClick={handleCompleteChallenge}>Gennemfør Udfordring</button>
+    </div>
 
-      {favorites.length > 0 && (
-  <div className="favorites-slider">
-    <h2>Favoritter</h2>
-    <div className="favorites-slider-container">
-      {programs.filter(program => favorites.includes(program.id)).map((program) => (
-        <div key={program.id} className="program-card-small">
-         <div className="program-image" style={{ backgroundImage: `url(${program.image})` }}></div>
+    {/* Fremskridt */}
+    <div className="progress-tracker">
+      <h2>Din Fremskridt</h2>
+      <p>Programmer gennemført: {completedPrograms}</p>
+      <div className="circular-progress-container">
+        <div className="circular-progress-bar" style={{ 
+          background: `conic-gradient(#222222 ${progress * 3.6}deg, #c3c8b3 0deg)` 
+        }}></div>
+        <div className="circular-progress-text">{progress}%</div>
+      </div>
+    </div>
+
+    {/* Filter og sortering */}
+    <div className="filter-bar">
+      <div className="filter-buttons-container">
+        <div className="filter-buttons-slider">
+          <button className="filter-btn" onClick={() => handleFilterClick('all')}>Alle</button>
+          <button className="filter-btn" onClick={() => handleFilterClick('Strækøvelser')}>Strækøvelser</button>
+          <button className="filter-btn" onClick={() => handleFilterClick('Vejrtrækning')}>Vejrtrækning</button>
+          <button className="filter-btn" onClick={() => handleFilterClick('Meditation')}>Meditation</button>
+          <button className="filter-btn" onClick={() => handleSortChange('popular')}>Populære</button>
+          <button className="filter-btn" onClick={() => handleSortChange('newest')}>Nyeste</button>
+        </div>
+      </div>
+    </div>
+
+    {/* Programliste */}
+    <div className="program-list">
+      {filteredPrograms.slice(0, visiblePrograms).map((program) => (
+        <div key={program.id} className="program-card">
+          <div className="program-image" style={{ backgroundImage: `url(${program.image})` }}></div>
           <div className="program-content">
             <h2>{program.title}</h2>
-            <p>{program.description}</p>
-            <p className="program-length">Længde: {program.length}</p>
-            <div onClick={() => handleRemoveFavorite(program.id)} style={{ cursor: 'pointer', fontSize: '20px' }}>
-              🗑️ Fjern fra favoritter
+            <p>
+              {expandedProgram === program.id
+                ? program.description
+                : `${program.description.slice(0, 100)}...`}
+              <span onClick={() => handleExpandDescription(program.id)}>
+                {expandedProgram === program.id ? ' Læs mindre' : ' Læs mere'}
+              </span>
+            </p>
+            <div onClick={() => handleFavoriteClick(program.id)} style={{ cursor: 'pointer', fontSize: '20px' }}>
+              {favorites.includes(program.id) ? '❤️' : '🤍'}
             </div>
           </div>
         </div>
       ))}
     </div>
+
+    {/* Vis mere-knap */}
+    {filteredPrograms.length > 6 && (
+      <div className="show-more-btn">
+        <button onClick={handleShowToggle}>
+          {isShowMore ? 'Vis mere' : 'Vis mindre'}
+        </button>
+      </div>
+    )}
   </div>
-)}
-
-      {/* Progress Section */}
-      <div className="daily-challenge">
-        <h2>Dagens Udfordring</h2>
-        <p>Udfør 10 minutters meditation for at reducere stress.</p>
-        <button onClick={handleCompleteChallenge}>Gennemfør Udfordring</button>
-      </div>
-
-      {/* Circular Progress Bar */}
-      <div className="progress-tracker">
-        <h2>Din Fremskridt</h2>
-        <p>Programmer gennemført: {completedPrograms}</p>
-        <div className="circular-progress-container">
-          <div className="circular-progress-bar" style={{ 
-            background: `conic-gradient(#222222 ${progress * 3.6}deg, #c3c8b3 0deg)` 
-          }}></div>
-          <div className="circular-progress-text">{progress}%</div>
-        </div>
-      </div>
-   
-
-
-      {/* Program List */}
-      <div className="title-section">
-        <h1>Programmer</h1>
-      </div>
-
-      <div className="filter-bar">
-     
-        <div className="filter-buttons-container">
-    <div className="filter-buttons-slider">
-        <button className="filter-btn" onClick={() => handleFilterClick('all')}>Alle</button>
-        <button className="filter-btn" onClick={() => handleFilterClick('Strækøvelser')}>Strækøvelser</button>
-        <button className="filter-btn" onClick={() => handleFilterClick('Vejrtrækning')}>Vejrtrækning</button>
-        <button className="filter-btn" onClick={() => handleFilterClick('Meditation')}>Meditation</button>
-        <button className="filter-btn" onClick={() => handleSortChange('popular')}>Populære</button>
-        <button className="filter-btn" onClick={() => handleSortChange('newest')}>Nyeste</button>
-    </div>
-</div>
-      </div>
-
-      <div className="program-list">
-        {filteredPrograms.slice(0, visiblePrograms).map((program) => (
-          <div key={program.id} className="program-card">
-           <div className="program-image" style={{ backgroundImage: `url(${program.image})` }}></div>
-            <div className="program-content">
-              <h2>{program.title}</h2>
-              <p>
-                {expandedProgram === program.id
-                  ? program.description
-                  : `${program.description.slice(0, 100)}...`}
-                <span onClick={() => handleExpandDescription(program.id)}>
-                  {expandedProgram === program.id ? ' Læs mindre' : ' Læs mere'}
-                </span>
-              </p>
-              <div onClick={() => handleFavoriteClick(program.id)} style={{ cursor: 'pointer', fontSize: '20px' }}>
-                {favorites.includes(program.id) ? '❤️' : '🤍'}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      
-
-      {filteredPrograms.length > 6 && (
-        <div className="show-more-btn">
-          <button onClick={handleShowToggle}>
-            {isShowMore ? 'Vis mere' : 'Vis mindre'}
-          </button>
-        </div>
-      )}
-    </div>
-
-  );
-
-
-  
+);
 };
 
 export default Program;

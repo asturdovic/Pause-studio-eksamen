@@ -1,14 +1,14 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 
-/* Generelt for hele siden */
+/* Grundlæggende Styles for hele siden */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #fafafa; /* Lysere baggrund */
+    background-color: #fafafa; 
     font-family: "Quicksand", sans-serif;
     box-sizing: border-box;
-
 }
 
 body {
@@ -18,76 +18,55 @@ body {
     padding-bottom: 180px;
 }
 
-
 /* Titel sektion */
 .title-section {
-    background-color: #ffffff; /* Baggrundsfarve for titel sektionen */
-  
+    background-color: #ffffff;
 }
 
 .title-section h1 {
     text-align: center;
     font-size: 36px;
-    color: #222222; /* Mørk farve til overskrifter */
+    color: #222222;
     padding: 0 15px;
     font-weight: 600;
 }
 
-/* Container for Filter Buttons */
-.filter-buttons-container {
+/* Filter sektion */
+.filter-buttons-container, .filter-buttons-slider {
     display: flex;
     gap: 15px;
-    justify-content: flex-start;  /* Justerer knapperne til venstre (eller center hvis ønskes) */
-    background-color: #ffffff; /* Baggrundsfarve for filter knapperne */
+    justify-content: flex-start;
+    background-color: #ffffff;
     padding: 10px;
     margin-bottom: 15px;
-    overflow-x: auto;  /* Muliggør horisontal rulling */
-    -webkit-overflow-scrolling: touch;  /* For smidig scrolling på mobile enheder */
-    width: 100%;  /* Sørger for at containeren ikke overskrider bredden */
-    box-sizing: border-box;  /* Inkluderer padding i bredden */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Container for filter buttons slider */
-.filter-buttons-slider {
-    display: flex;
-    overflow-x: auto; /* Muliggør horisontal rulling */
-    gap: 15px; 
-    padding: 10px;
-    background-color: #ffffff; /* Baggrundsfarve */
-    width: 100%;  /* Fylder hele bredden af containeren */
-    box-sizing: border-box;  /* Sørger for at padding er inkluderet i bredden */
-    overflow-y: hidden; /* Sikrer, at der ikke er lodret rulling */
-    -webkit-overflow-scrolling: touch; /* Aktivere smooth scrolling på mobile enheder */
+.filter-buttons-container::-webkit-scrollbar,
+.filter-buttons-container {
+    display: none; /* Skjuler scrollbar for webkit-browsere og Firefox */
 }
 
-/* Styling for each filter button */
+/* Filter knapper */
 .filter-btn {
-    background-color: #222222; /* Farve fra temaet */
+    background-color: #222222;
     color: #ffffff;
     padding: 12px 24px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    border-radius: 0; /* Fjerner de runde kanter */
-    flex-shrink: 0;  /* Sørger for at knapperne ikke bliver mindre */
-    white-space: nowrap;  /* Forhindrer tekstbrud i knappen */
-    min-width: 120px;  /* Giver hver knap en minimumsbredde */
-    max-width: 150px;  /* Begrænser bredden på knapperne */
+    border-radius: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
+    min-width: 120px;
+    max-width: 150px;
 }
 
-/* Hover styling */
 .filter-btn:hover {
-    background-color: #a1b09b; /* Dæmpet farve til hover */
-}
-
-/* Skjul scrollbar for webkit-browsere */
-.filter-buttons-container::-webkit-scrollbar {
-    display: none;  /* Skjuler scrollbaren */
-}
-
-/* Skjul scrollbar for Firefox */
-.filter-buttons-container {
-    scrollbar-width: none;  /* Skjuler scrollbar i Firefox */
+    background-color: #a1b09b;
 }
 
 /* Søgefelt */
@@ -95,28 +74,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff; /* Baggrundsfarve for søgefeltet */
+    background-color: #ffffff;
     padding: 20px;
 }
 
-
 /* Program Cards */
 .program-list {
-    gap: 20px; /* Afstand mellem kortene */
+    gap: 20px;
     background-color: #ffffff;
 }
-  
+
 .program-card {
-    background-color: #ffffff; /* Lysere farve for kortene */
+    background-color: #ffffff;
     border-radius: 5px;
     overflow: hidden;
-    width: 100%; /* Sørg for at kortene fylder hele grid-cellens bredde */
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 10%;
 }
-  
+
 .program-card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -129,14 +107,13 @@ body {
     background-position: center;
 }
 
-
 .program-content {
     padding: 20px;
 }
 
 .program-content h2 {
     font-size: 18px;
-    color: #222222; /* Mørk farve for programtitler */
+    color: #222222;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -148,7 +125,7 @@ body {
 }
 
 .program-length {
-    color: #c3c8b3; /* Farve for længde af programmet */
+    color: #c3c8b3;
     font-size: 14px;
 }
 
@@ -172,7 +149,7 @@ body {
 }
 
 .show-more-btn button {
-    background-color: #222222; /* Farve fra temaet */
+    background-color: #222222;
     color: #ffffff;
     padding: 12px 24px;
     border: none;
@@ -183,13 +160,13 @@ body {
 }
 
 .show-more-btn button:hover {
-    background-color: #000000; /* Hover farve */
+    background-color: #000000;
 }
 
 /* Favorites Slider */
 .favorites-slider {
     padding: 20px;
-    background-color: #f2f5e9; /* Lys baggrund for favoritter */
+    background-color: #f2f5e9;
     border-radius: 8px;
 }
 
@@ -234,27 +211,20 @@ body {
     font-size: 12px;
 }
 
-@media screen and (max-width: 768px) {
-    .favorites-slider-container {
-        padding: 0;
-    }
-}
-
 /* Header Section */
 .header {
     text-align: center;
     padding: 30px 20px;
-    background-color: #ffffff; /* Farve fra temaet */
+    background-color: #ffffff;
     color: #000000;
-   
 }
-  
+
 .header h1 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-  
+
 .header p {
     font-size: 16px;
     font-weight: 400;
@@ -263,38 +233,37 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-  
+
 /* Responsiv tilpasning for små skærme */
 @media screen and (max-width: 768px) {
     .header h1 {
-        font-size: 24px; /* Mindre font på tablet */
+        font-size: 24px;
     }
 
     .header p {
-        font-size: 14px; /* Mindre tekst på tablet */
-        padding: 0 20px; /* Sørg for at teksten ikke går helt ud til kanterne */
+        font-size: 14px;
+        padding: 0 20px;
     }
 }
-  
+
 @media screen and (max-width: 480px) {
     .header h1 {
-        font-size: 20px; /* Mindre font på mobile enheder */
+        font-size: 20px;
     }
 
     .header p {
-        font-size: 12px; /* Mindre tekst på mobile enheder */
-        padding: 0 15px; /* Justerer padding for at passe på mobilskærme */
+        font-size: 12px;
+        padding: 0 15px;
     }
 }
 
 /* Dagens Udfordring Section */
 .daily-challenge {
     background-color: #222222;
-    position: relative; /* Gør det muligt at placere pseudo-elementet over sektionen */
+    position: relative;
     padding: 20px;
     text-align: center;
 }
-
 
 .daily-challenge h2 {
     font-size: 1.8em;
@@ -315,7 +284,7 @@ body {
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-radius: 0; /* Fjerner de runde kanter */
+    border-radius: 0;
 }
 
 .daily-challenge button:hover {
@@ -329,8 +298,6 @@ body {
     background-color: #ffffff;
     padding: 20px;
     text-align: center;
-   
-
 }
 
 .progress-tracker h2 {
@@ -348,15 +315,15 @@ body {
 /* Cirkulær Progress Bar Container */
 .circular-progress-container {
     position: relative;
-    width: 100px; /* Kan justeres efter behov */
-    height: 100px; /* Kan justeres efter behov */
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background-color:#c3c8b3; 
+    background-color: #c3c8b3;
     border: 10px solid transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto; /* Centrerer på siden */
+    margin: 20px auto;
 }
 
 /* Indre cirkel til at vise procent */
@@ -381,3 +348,12 @@ body {
     color: white;
 }
 
+/* Lazy Loading */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"]:not([src=""]) {
+    opacity: 1;
+}
