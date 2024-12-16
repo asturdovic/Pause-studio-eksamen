@@ -2,6 +2,10 @@ import React from "react";
 import "../css/Forside.css";
 
 function Forside() {
+  // Tilføj handleBookingClick-funktionen
+  const handleBookingClick = () => {
+    console.log("Book tid knap klikket!");
+  };
 
   return (
     <div className="forside-container">

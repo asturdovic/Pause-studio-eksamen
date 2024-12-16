@@ -16,15 +16,63 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<><Forside /><Menubar /></>} />
-        <Route path="/Booking" element={<><Booking /><Menubar /></>} />
-        <Route path="/Login" element={<><Login /><Menubar /></>} />
-        <Route path="/Profil" element={<><Profil /><Menubar /></>} />
-        <Route path="/Medlemsfordele" element={<><Medlemsfordele /><Menubar /></>} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Forside />
+              <Menubar />
+            </>
+          }
+        />
+        <Route
+          path="/Booking"
+          element={
+            <>
+              <Booking />
+              <Menubar />
+            </>
+          }
+        />
+        <Route
+          path="/Login"
+          element={
+            <>
+              <Login />
+              <Menubar />
+            </>
+          }
+        />
+        <Route
+          path="/Profil"
+          element={
+            <>
+              <Profil />
+              <Menubar />
+            </>
+          }
+        />
+        <Route
+          path="/Medlemsfordele"
+          element={
+            <>
+              <Medlemsfordele />
+              <Menubar />
+            </>
+          }
+        />
         <Route path="/Onboarding" element={<Onboarding />} />
         <Route path="/Floating" element={<Floating />} />
         <Route path="/Booket" element={<Booket />} />
-        <Route path="/Program" element={<><Program /><Menubar /></>} />
+        <Route
+          path="/Program"
+          element={
+            <>
+              <Program />
+              <Menubar />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
