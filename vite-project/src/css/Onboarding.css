@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo&display=swap');
 /* Generel styling til hele onboarding-siden */
 .onboarding-slide {
   position: relative;
@@ -11,7 +12,7 @@
   align-items: center;
   color: #000000;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Glegoo", serif;
 }
 
 /* Overlay */

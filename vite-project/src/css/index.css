@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Glegoo&display=swap");
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Glegoo", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -32,7 +34,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: "Glegoo", serif;
   cursor: pointer;
   transition: border-color 0.25s;
 }

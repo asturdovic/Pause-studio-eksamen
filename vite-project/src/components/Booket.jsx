@@ -7,7 +7,7 @@ function Booket() {
 
   // Close button logic
   const goToHome = () => {
-    navigate("/"); // Navigate to the home page
+    navigate("/Forside"); // Navigate to the home page
   };
 
   return (
@@ -29,9 +29,11 @@ function Booket() {
         <h2 className="booking-title">Floating</h2>
         <p className="booking-thanks">Tak for din booking</p>
         <p className="booking-details">
-          Du har reserveret floating den <strong>6/12</strong> kl. <strong>10</strong>
+          Du har reserveret floating den <strong>6/12</strong> kl.{" "}
+          <strong>10</strong>
           <br />
-          Vi glæder os til at byde dig velkommen hos <strong>Pause Studio</strong>
+          Vi glæder os til at byde dig velkommen hos{" "}
+          <strong>Pause Studio</strong>
         </p>
       </div>
     </div>
