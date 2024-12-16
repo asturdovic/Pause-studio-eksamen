@@ -16,8 +16,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Standard route (path="/") er ændret til Login */}
         <Route
           path="/"
+          element={
+            <>
+              <Login />
+            </>
+          }
+        />
+        <Route
+          path="/Forside"
           element={
             <>
               <Forside />
@@ -30,15 +39,6 @@ function App() {
           element={
             <>
               <Booking />
-              <Menubar />
-            </>
-          }
-        />
-        <Route
-          path="/Login"
-          element={
-            <>
-              <Login />
               <Menubar />
             </>
           }
