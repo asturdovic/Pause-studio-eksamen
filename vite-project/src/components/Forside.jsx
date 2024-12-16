@@ -17,7 +17,8 @@ function Forside() {
       {/* Belønningssektion */}
       <div className="forside-reward-section-wrapper">
         <h3 className="forside-reward-title">
-          Hver 10 behandling er på vores regning
+          Hver 10 behandling er på <br />
+          vores regning
         </h3>
         <div className="forside-reward-section">
           {[...Array(10)].map((_, index) => (
@@ -61,6 +62,23 @@ function Forside() {
               className="forside-service-image service-image-4"
             />
           </a>
+        </div>
+      </div>
+
+      {/* Ny sektion: Medlemsfordele */}
+      <div className="forside-benefits-wrapper">
+        <div className="forside-benefits-card benefits-card1">
+          <img
+            src="/public/img/lillepause.png"
+            alt="Benefit 1"
+            className="forside-benefits-image"
+          />
+          <div className="forside-benefits-text">
+            <p>Optjen større rabatter, jo flere behandlinger du booker</p>
+            <a href="#" className="forside-benefits-button">
+              Se rabatsystemet
+            </a>
+          </div>
         </div>
       </div>
     </div>

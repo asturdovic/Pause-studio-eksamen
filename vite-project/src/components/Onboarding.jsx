@@ -45,7 +45,7 @@ function Onboarding() {
 
   // Funktion til at lukke onboarding og gå til Forside.jsx
   const goToHome = () => {
-    navigate("/");
+    navigate("/Forside");
   };
 
   // Funktion til at håndtere klik på venstre/højre side
