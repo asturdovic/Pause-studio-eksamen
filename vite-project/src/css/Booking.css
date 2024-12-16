@@ -1,0 +1,63 @@
+/* Container styling */
+main {
+    padding-bottom: 4.4375rem;
+    padding-top: 1.25rem;
+  }
+
+.container {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  /* Button styling */
+  .button-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    outline: none;
+  }
+  
+  .option-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  
+  .option-button.active {
+    background-color: #222222;
+    color: white;
+    outline: none;
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .option-item {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .option-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .option-item img {
+    width: 100%;
+    border-radius: 10px;
+    height: 100px;       /* Fast højde */
+    object-fit: cover;
+  }
+  
+  .option-item p {
+    margin-top: 10px;
+    font-weight: bold;
+  }

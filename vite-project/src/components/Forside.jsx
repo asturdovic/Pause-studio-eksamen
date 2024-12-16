@@ -2,9 +2,6 @@ import React from "react";
 import "../css/Forside.css";
 
 function Forside() {
-  const handleBookingClick = () => {
-    console.log("Book-knap klikket!");
-  };
 
   return (
     <div className="forside-container">
