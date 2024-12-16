@@ -2,7 +2,7 @@
   font-family: Arial, sans-serif;
   color: #000000;
   padding: 16px;
-  background-color: #c3c8b3; /* Beholder din valgte farve */
+  background-color: #c3c8b3; 
 }
 
 .medlemsfordele-title {
@@ -13,7 +13,7 @@
 }
 
 .progress-section {
-  background-color: #222222; /* Mørk baggrund */
+  background-color: #222222; 
   padding: 16px;
 
   color: #ffffff;
@@ -67,14 +67,13 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: #fff; /* Hvid tekstfarve */
+  color: #fff; 
   font-size: 18px;
   font-weight: bold;
 }
 
 .benefit-card1 .cta-button {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 20px;
   background-color: #fff;
   color: #000;
@@ -83,6 +82,7 @@
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s, color 0.3s;
+  margin-top: 20px;
 }
 
 .benefit-card1 .cta-button:hover {
@@ -119,7 +119,9 @@
 }
 
 .benefit-card2 .cta-button:hover {
-  background-color: #222222;
+  background-color: #222222; /* Mørk baggrund ved hover */
+  color: #ffffff; /* Ændrer tekstfarve ved hover */
+  cursor: pointer;
 }
 
 /* -------- Benefit-Card 3 -------- */
@@ -127,7 +129,7 @@
   position: absolute;
   bottom: 10px;
   left: 20px;
-  color: #000; /* Sort tekstfarve */
+  color: #000;
   font-size: 18px;
   font-weight: 600;
 }
@@ -144,4 +146,5 @@
   font-weight: 600;
   border-top-left-radius: 15px; /* Afrunder øverste venstre hjørne */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Skygge for mere dybde */
+  margin-bottom: 80px;
 }
