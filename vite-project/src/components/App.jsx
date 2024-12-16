@@ -10,6 +10,7 @@ import Medlemsfordele from "./Medlemsfordele";
 import Program from "./Program";
 import Onboarding from "./Onboarding";
 import Floating from "./Floating";
+import Booket from "./Booket";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Medlemsfordele" element={<><Medlemsfordele /><Menubar /></>} />
         <Route path="/Onboarding" element={<Onboarding />} />
         <Route path="/Floating" element={<Floating />} />
+        <Route path="/Booket" element={<Booket />} />
         <Route path="/Program" element={<><Program /><Menubar /></>} />
       </Routes>
     </BrowserRouter>
