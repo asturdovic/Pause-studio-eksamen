@@ -12,6 +12,13 @@ import Onboarding from "./Onboarding";
 import Floating from "./Floating";
 import Booket from "./Booket";
 
+useEffect(() => {
+  if (!hasLoaded) {
+    setHasLoaded(true); // Set to true so loading screen only shows once
+    navigate("/Login"); // Redirect to loading screen on first load
+  }
+}, [hasLoaded, navigate]);
+
 function App() {
   return (
     <BrowserRouter>
