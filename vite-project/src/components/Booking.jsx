@@ -45,24 +45,24 @@ function Booking() {
           {selectedOption === 'Enkelt session' && (
             <>
               <div className="option-item" onClick={() => handleSelectOption('Floating')}>
+              <p>Floating</p>
                 <img src="/public/img/floating.png" alt="Floating" />
-                <p>Floating</p>
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Infrared sauna')}>
+              <p>Infrarød sauna</p>
                 <img src="/public/img/infrarød.png" alt="Infrared sauna" />
-                <p>Infrarød sauna</p>
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Recovery boots')}>
+              <p>Recovery boots</p>
                 <img src="/public/img/recoveryboots.png" alt="Recovery boots" />
-                <p>Recovery boots</p>
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Cryosauna')}>
+              <p>Cryosauna</p>
                 <img src="/public/img/cryosauna.png" alt="Cryosauna" />
-                <p>Cryosauna</p>
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Lysbehandling')}>
+              <p>Lysbehandling</p>
                 <img src="/public/img/lysbehandling.png" alt="Lysbehandling" />
-                <p>Lysbehandling</p>
               </div>
             </>
           )}

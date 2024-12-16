@@ -80,6 +80,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Flexible grid */
   gap: 20px;
   margin: 0 auto 20px; /* Center grid and add spacing below */
+  margin-bottom: 70px;
 }
 
 /* Option item (grid child) */

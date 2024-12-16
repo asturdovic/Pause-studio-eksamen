@@ -78,7 +78,9 @@
     color: white;
 }
 
-.option-btn:focus {
+.option-btn:focus,
+.book-btn:focus,
+.time-btn:focus {
     outline: none; /* Remove blue outline when focused */
 }
 
@@ -90,30 +92,98 @@
 }
 
 /* Calendar container */
-.calendar-container {
+.custom-calendar {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
   }
   
-  .react-datepicker__input-container input {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  .react-datepicker {
+    border: none;
   }
   
-  /* Time selector styling */
-  .time-selector select {
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Modify calendar header styles */
   .react-datepicker__header {
     background-color: #222222;
     color: white;
+    border: none;
   }
   
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected {
+    background-color: #222222 !important;
+    color: #fff;
+    border-radius: 50%;
+  }
+  
+  .react-datepicker__day {
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  .react-datepicker__day:hover {
+    background-color: #C3C8B3;
+    color: #222222;
+  }
+
+  /* Month and Year Header Text */
+.react-datepicker__current-month {
+    color: white !important;
+  }
+  
+  /* Weekday Names (Su, Mo, Tu, etc.) */
+  .react-datepicker__day-name {
+    color: white !important;
+  }
+  
+  
+  /* Time Slots */
+  .time-slots {
+    text-align: center;
+  }
+  
+  .time-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .time-btn {
+    background-color: #f0f0f0;
+    color: #222222;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .time-btn.selected {
+    background-color: #222222;
+    color: #fff;
+  }
+  
+  .time-btn:hover {
+    background-color: #C3C8B3;
+    color: #222222;
+    border-color: #222222;
+  }
+  
+  /* Book Button */
+  .book-btn {
+    background-color: #222222;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  .book-btn:hover {
+    background-color: #444444;
+  }
