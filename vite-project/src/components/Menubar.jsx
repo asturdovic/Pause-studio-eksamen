@@ -5,7 +5,7 @@ import "../css/menubar.css"; // Importing BottomNav.css for styling
 function Menubar() {
   return (
     <nav className="menubarbottom">
-      <NavLink to="/" className="nav-item">
+      <NavLink to="/Forside" className="nav-item">
         <img src="ikoner/hjem.svg" alt="Home Icon" />
       </NavLink>
       <NavLink to="/Program" className="nav-item">

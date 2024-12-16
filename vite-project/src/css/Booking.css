@@ -32,6 +32,7 @@ main {
   margin: 0 auto; /* Center container */
   margin-top: 10px;
   padding: 0 1rem; /* Add some horizontal padding */
+  padding-top:10px;
 }
 
 .booking-top {
