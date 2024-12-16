@@ -1,14 +1,4 @@
-/* Global Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f3f4f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+
 
 /* Page Container */
 .page-container {
