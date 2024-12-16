@@ -144,4 +144,5 @@
   font-weight: 600;
   border-top-left-radius: 15px; /* Afrunder øverste venstre hjørne */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Skygge for mere dybde */
+  margin-bottom: 70px;
 }
