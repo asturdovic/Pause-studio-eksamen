@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
-  root: 'src', // this should point to your source folder where index.html is located
+  root: 'src', // Rodmappen til projektet, hvor dine kildefiler ligger
   build: {
-    outDir: '../dist', // this specifies the output directory for the build
+    outDir: '../dist', // Udbudsområdet skal være udenfor 'src' mappen
     rollupOptions: {
-      input: 'src/index.html', // this should point to your index.html
+      input: 'src/index.html', // Startpunktet for Vite byggeren
     },
   },
   plugins: [react()],
