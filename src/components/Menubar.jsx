@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../css/menubar.css"; // Importing BottomNav.css for styling
+import "../css/Menubar.css"; // Importing BottomNav.css for styling
 
 function Menubar() {
   return (
