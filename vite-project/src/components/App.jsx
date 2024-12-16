@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/Forside"
+          path="/"
           element={
             <>
               <Forside />
@@ -42,7 +42,7 @@ function App() {
           }
         />
         <Route
-          path="/"
+          path="/Login"
           element={
             <>
               <Login />

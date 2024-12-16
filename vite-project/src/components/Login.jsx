@@ -36,7 +36,7 @@ function LoginPage() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Logged in as:', userCredential.user.email);
-        navigate('/forside'); // Naviger til forsiden efter login
+        navigate('/Onboarding'); // Naviger til forsiden efter login
       })
       .catch((error) => {
         const errorCode = error.code;
