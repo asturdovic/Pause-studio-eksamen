@@ -2,7 +2,8 @@
   "name": "pause-studio-eksamen",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "firebase": "^11.1.0",
