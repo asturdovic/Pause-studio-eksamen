@@ -3,12 +3,11 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/Pause-studio-eksamen/' : '/', // Brug / kun i udvikling
-  root: '.', // Sæt root til den aktuelle mappe
+  base: '/Pause-studio-eksamen/', // Make sure to use your GitHub repo name
   build: {
-    outDir: 'dist', // Angiv output-mappen
+    outDir: 'dist', // Set the output directory
     rollupOptions: {
-      input: 'index.html', // Angiv korrekt input-fil
+      input: 'index.html', // Ensure this points to your entry file
     },
   },
   plugins: [react()],
