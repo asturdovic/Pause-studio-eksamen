@@ -12,19 +12,19 @@ function Onboarding() {
       id: 1,
       title: "Nemt booking system",
       text: "Vores bookingsystem gør det nemt for dig at finde og reservere behandlinger nemt og hurtigt. Du kan altid ændre eller aflyse direkte i appen.",
-      backgroundImage: "/public/img/onboarding1.png",
+      backgroundImage: "/img/onboarding1.png", // Fjern public fra stien
     },
     {
       id: 2,
       title: "Optjen belønninger",
       text: "Hver 10. behandling er på vores regning. Hold styr på dine fordele direkte i appen og se, hvor tæt du er på din næste belønning.",
-      backgroundImage: "/public/img/onboarding3.png",
+      backgroundImage: "/img/onboarding3.png", // Fjern public fra stien
     },
     {
       id: 3,
       title: "Få adgang til mere",
       text: "Udforsk vores eksklusive rabatsystem og vores hjemme-pause-program",
-      backgroundImage: "/public/img/onboarding2.png",
+      backgroundImage: "/img/onboarding2.png", // Fjern public fra stien
       cta: "Kom igang",
     },
   ];
@@ -64,9 +64,9 @@ function Onboarding() {
     <div
       className="onboarding-slide"
       style={{
-        backgroundImage: `url(${slides[currentSlide].backgroundImage})`,
+        background: `url(${slides[currentSlide].backgroundImage}) no-repeat center center/cover`, // Justeret baggrundsstil
       }}
-      onClick={handleScreenClick} // Tilføjer klik-event på hele skærmen
+      onClick={handleScreenClick}
     >
       {/* Overlay */}
       <div className="overlay"></div>

@@ -11,7 +11,7 @@ function Profil() {
       {/* Profil info */}
       <div className="profile-info">
         <div className="profile-picture">
-          <img src="/public/img/profil.png" alt="Profile" />
+          <img src="img/profil.png" alt="Profile" />
         </div>
         <div className="profile-name">
           <p className="profile-bold">Sasha</p>
@@ -25,7 +25,7 @@ function Profil() {
           <a href="/medlemsfordele" className="option-link">
             <div className="option-left">
               <img
-                src="/public/img/badge.png"
+                src="img/badge.png"
                 alt="Medlemsfordele"
                 className="option-icon"
               />
@@ -38,7 +38,7 @@ function Profil() {
           <a href="/medlemsfordele" className="option-link">
             <div className="option-left">
               <img
-                src="/public/img/kalender.png"
+                src="img/kalender.png"
                 alt="Mine bookings"
                 className="option-icon"
               />
@@ -51,7 +51,7 @@ function Profil() {
           <a href="/medlemsfordele" className="option-link">
             <div className="option-left">
               <img
-                src="/public/img/brugertilpasning.png"
+                src="img/brugertilpasning.png"
                 alt="Brugertilpasning"
                 className="option-icon"
               />
@@ -64,7 +64,7 @@ function Profil() {
           <a href="/medlemsfordele" className="option-link">
             <div className="option-left">
               <img
-                src="/public/img/hjaelp.png"
+                src="img/hjaelp.png"
                 alt="Hjælpecenter"
                 className="option-icon"
               />
@@ -77,7 +77,7 @@ function Profil() {
           <a href="/medlemsfordele" className="option-link">
             <div className="option-left">
               <img
-                src="/public/img/om.png"
+                src="img/om.png"
                 alt="Om Pause Studio"
                 className="option-icon"
               />

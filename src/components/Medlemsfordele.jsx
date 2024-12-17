@@ -23,7 +23,7 @@ function Medlemsfordele() {
       </div>
 
       <div class="benefit-card benefit-card1">
-        <img src="/public/img/medlemsfordele.png" alt="Benefit 1" />
+        <img src="img/medlemsfordele.png" alt="Benefit 1" />
         <div class="text-content">
           <p>Optjen større rabatter, jo flere behandlinger du booker</p>
           <a href="#" class="cta-button">
@@ -42,14 +42,14 @@ function Medlemsfordele() {
       </div>
 
       <div class="benefit-card benefit-card3">
-        <img src="/public/img/gavekort.png" alt="Benefit 3" />
+        <img src="img/gavekort.png" alt="Benefit 3" />
         <div class="text-content">
           <p>15% på gavekort</p>
         </div>
       </div>
 
       <div class="benefit-card benefit-card4">
-        <img src="/public/img/produkter.png" alt="Benefit 4" />
+        <img src="img/produkter.png" alt="Benefit 4" />
         <div class="text-box">
           <p>15% på alle varer og produkter</p>
         </div>

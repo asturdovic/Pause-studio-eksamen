@@ -47,23 +47,23 @@ function Booking() {
             <>
               <div className="option-item" onClick={() => handleSelectOption('Floating')}>
                 <p>Floating</p>
-                <img src="/public/img/floating.png" alt="Floating" />
+                <img src="img/floating.png" alt="Floating" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Infrared sauna')}>
                 <p>Infrarød sauna</p>
-                <img src="/public/img/infrarød.png" alt="Infrared sauna" />
+                <img src="img/infrarød.png" alt="Infrared sauna" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Recovery boots')}>
                 <p>Recovery boots</p>
-                <img src="/public/img/recoveryboots.png" alt="Recovery boots" />
+                <img src="img/recoveryboots.png" alt="Recovery boots" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Cryosauna')}>
                 <p>Cryosauna</p>
-                <img src="/public/img/cryosauna.png" alt="Cryosauna" />
+                <img src="img/cryosauna.png" alt="Cryosauna" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Lysbehandling')}>
                 <p>Lysbehandling</p>
-                <img src="/public/img/lysbehandling.png" alt="Lysbehandling" />
+                <img src="img/lysbehandling.png" alt="Lysbehandling" />
               </div>
             </>
           )}
@@ -72,19 +72,19 @@ function Booking() {
             <>
               <div className="option-item" onClick={() => handleSelectOption('Massage')}>
               <p>PAUSE de luxe</p>
-                <img src="/public/img/deluxe.png" alt="Billede af en drikkevare der bliver hældt op" />
+                <img src="img/deluxe.png" alt="Billede af en drikkevare der bliver hældt op" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Par der sidder og hygger')}>
               <p>Stor pause</p>
-                <img src="/public/img/storpause.png" alt="" />
+                <img src="img/storpause.png" alt="" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Privat floating rum')}>
               <p>Privat pause</p>
-                <img src="/public/img/privatpause.png" alt="Aromatherapy" />
+                <img src="img/privatpause.png" alt="Aromatherapy" />
               </div>
               <div className="option-item" onClick={() => handleSelectOption('Billede af kvinde i kåbe der pumper håndcreme i hånden')}>
               <p>Lille pause</p>
-                <img src="/public/img/lillepause.png" alt="Aromatherapy" />
+                <img src="img/lillepause.png" alt="Aromatherapy" />
               </div>
               {/* Add more wellness pack items as needed */}
             </>

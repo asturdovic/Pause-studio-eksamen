@@ -97,7 +97,7 @@ function Floating() {
       <h2 className="header-title">Book tid her</h2>
 
       <div className="floating-booking">
-        <img src="/public/img/floating.png" alt="Floating" />
+        <img src="img/floating.png" alt="Floating" />
         <p>Floating</p>
       </div>
 

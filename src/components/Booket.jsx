@@ -19,7 +19,7 @@ function Booket() {
 
       <div className="image-booket">
         <img
-          src="/img/floating.png" // Path to your image in the 'public' folder
+          src="img/floating.png" // Path to your image in the 'public' folder
           alt="Floating"
           className="floating-image"
         />

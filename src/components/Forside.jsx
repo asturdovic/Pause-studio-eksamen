@@ -36,28 +36,28 @@ function Forside() {
           {/* Klikbare billeder med href til /booking */}
           <a href="/booking">
             <img
-              src="/public/img/service1.png"
+              src="img/service1.png"
               alt="Massage"
               className="forside-service-image service-image-1"
             />
           </a>
           <a href="/booking">
             <img
-              src="/public/img/service2.png"
+              src="img/service2.png"
               alt="Sauna"
               className="forside-service-image service-image-2"
             />
           </a>
           <a href="/booking">
             <img
-              src="/public/img/service3.png"
+              src="img/service3.png"
               alt="Floating"
               className="forside-service-image service-image-3"
             />
           </a>
           <a href="/booking">
             <img
-              src="/public/img/service4.png"
+              src="img/service4.png"
               alt="Sauna"
               className="forside-service-image service-image-4"
             />
@@ -69,7 +69,7 @@ function Forside() {
       <div className="forside-benefits-wrapper">
         <div className="forside-benefits-card benefits-card1">
           <img
-            src="/public/img/lillepause.png"
+            src="img/lillepause.png"
             alt="Benefit 1"
             className="forside-benefits-image"
           />
